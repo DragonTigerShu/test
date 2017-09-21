@@ -1,0 +1,73 @@
+.drawer1-bg{
+	background-image:url(images/drawer1-bg.png);
+}
+.res-bodybg{
+	background-image:url(images/bodybg.png);
+}
+.res-weather{
+	background-image:url(images/weather.png);
+}
+.res-inbox{
+	background-image:url(images/inbox.png);
+}
+.res-contact{
+	background-image:url(images/contact.png);
+}
+.res-favorite{
+	background-image:url(images/favorite.png);
+}
+.res-memo{
+	background-image:url(images/memo.png);
+}
+.res-message{
+	background-image:url(images/message.png);
+}
+.res-feedback{
+	background-image:url(images/feedback.png);
+}
+.res-setting{
+	background-image:url(images/setting.png);
+}
+.res-addmore{
+	background-image:url(images/addmore.png);
+}
+.uinn-header{
+	padding:1.875em 0.875em 0;
+}
+.uinn-weather{
+	padding:1em;
+}
+.ut-sbody{
+	-webkit-box-shadow:20px 0px 20px rgba(63,66,72,1) inset;
+	box-shadow:20px 0px 20px rgba(63,66,72,1) inset;
+}
+.umw-weather{
+	min-width:3em;
+	min-height:3em;
+}
+.umwh-icons{
+	min-height:1.6em;
+	min-width:1.6em;
+}
+.umwh-addmore{
+	min-height:1.8em;
+	min-width:1.8em;
+}
+.t-67d{
+	color:#67d5ff;
+}
+.ulev-temp{
+	font-size:1.7em;
+}
+.ubb-header{
+	border-bottom:1px solid #5b5b5b;
+}
+.uinn-date{
+	padding: 0.5em 0.5em 1em;
+}
+.uinn-content{
+	padding:0.5em;
+}
+.uinn-icons{
+	padding:.5em 1em;
+}

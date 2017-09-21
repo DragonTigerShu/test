@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="login_drawer/css/main.css">
+        <style>
+            .drawer {
+                margin-left: 4em;
+            }
+            .shadow {
+                -webkit-box-shadow: inset -4px 1px 3px rgba(0, 0, 0, .2);
+                box-shadow: inset -4px 1px 3px rgba(0, 0, 0, .2)
+            }
+        </style>
+    </head>
+    <body class="um-vp " ontouchstart>
+        <div id="page_0" class="up ub ub-ver bc-bg uhide" tabindex="0" >
+            <div id="header" class="uh sc-bg-active">
+
+            </div>
+            <div id="content" class=" tx-l shadow drawer ub ub-ver ub-f1 ub-fv t-wh ub-img3 drawer1-bg">
+                <div  class="uh">
+                    <div class="tx-c uinn-header">
+                        <div class="ulev2" id="city">
+                            北京市
+                        </div>
+                        <div class="umar-t">
+                            <span class="ulev-1">晴朗</span>
+                        </div>
+                        <div class="ub ub-ac ub-pc uinn-weather">
+                            <div class="umw-weather res-weather ub-img1"></div>
+                            <div class="t-67d umar-l ub-f1 tx-r ulev-temp">
+                                5°C
+                            </div>
+                        </div>
+                        <div class="ub ub-ac ub-pc ubb-header uinn-date">
+                            <div class="ulev-1">
+                                2013年11月28日
+                            </div>
+                            <div class="umar-l ub-f1 tx-r ulev-1">
+                                星期四
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="utra bc-text-head ub ub-f1" id="left_content">
+                    <div class="uinn-content ub ub-ver ub-fv ub-f1">
+                        <div class="ub ub-f1">
+                            <div class="ub ub-f1 ub-ver ub-ac uinn-icons">
+                                <div class="res-inbox ub-img umwh-icons"></div>
+                                <div class="">
+                                    <span class="ulev-1">收件箱</span>
+                                </div>
+                            </div>
+                            <div class="ub ub-f1 ub-ver ub-ac uinn-icons">
+                                <div class="res-contact ub-img umwh-icons"></div>
+                                <div class="">
+                                    <span class="ulev-1">通讯录</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ub ub-f1">
+                            <div class="ub ub-f1 ub-ver ub-ac uinn-icons">
+                                <div class="res-favorite ub-img umwh-icons"></div>
+                                <div class="">
+                                    <span class="ulev-1">收藏夹</span>
+                                </div>
+                            </div>
+                            <div class="ub ub-f1 ub-ver ub-ac uinn-icons">
+                                <div class="res-memo ub-img umwh-icons"></div>
+                                <div class="">
+                                    <span class="ulev-1">记事本</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ub ub-f1">
+                            <div class="ub ub-f1 ub-ver ub-ac uinn-icons">
+                                <div class="res-message ub-img umwh-icons"></div>
+                                <div class="">
+                                    <span class="ulev-1">资讯交流</span>
+                                </div>
+                            </div>
+                            <div class="ub ub-f1 ub-ver ub-ac uinn-icons">
+                                <div class="res-feedback ub-img umwh-icons"></div>
+                                <div class="">
+                                    <span class="ulev-1">咨询反馈</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ub ub-f1">
+                            <div class="ub ub-f1 ub-ver ub-ac uinn-icons">
+                                <div class="res-setting ub-img umwh-icons"></div>
+                                <div class="">
+                                    <span class="ulev-1">设置</span>
+                                </div>
+                            </div>
+                            <div class="ub ub-f1 ub-ver ub-ac ub-pc uinn-icons">
+                                <div class="res-addmore ub-img umwh-addmore"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.window.open("login", "login.html", 10, 256);
+            appcan.window.subscribe("main_window_open", function() {
+                setTimeout(function() {
+                    $("#page_0").removeClass("uhide");
+                }, 1000);
+            })
+            appcan.window.subscribe("draw_close", function() {
+                appcan.window.close(-1);
+            });
+        });
+        appcan.button("#close_btn", "btn-act", function() {
+            appcan.window.publish("main_window_close", "");
+            setTimeout(function(){
+               appcan.window.close(-1); 
+            },200)
+        })
+    </script>
+</html>
